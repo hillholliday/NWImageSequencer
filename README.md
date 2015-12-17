@@ -35,7 +35,7 @@ sequencer.createLocalMovieWithImages(images, options: options,
 NWImageSequencer also has helper functions to save the movie created in the local directory to an album the photo roll using the Photos framework. The success block returns a PHAsset instance that can be used to fetch the saved video
 
 ```
-self.sequencer?.saveMovieAtUrl(movieUrl, toAlbumNamed: "Example", 
+sequencer.saveMovieAtUrl(movieUrl, toAlbumNamed: "Example", 
                                onSaveSuccess: { (asset) -> Void in
                                     print("Sucessfully saved video asset: \(asset)")
                                }, 
