@@ -1,0 +1,10 @@
+framework module NWImageSequencer {
+  umbrella header "NWImageSequencer.h"
+
+  export *
+  module * { export * }
+}
+
+module NWImageSequencer.Swift {
+    header "NWImageSequencer-Swift.h"
+}
