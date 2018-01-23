@@ -1,26 +1,18 @@
 ## Synopsis
 
-`NWImageSequencer` is a quick and easy to use Swift 2.0 framework for generating movie files from an array of images.
-
+If you hate working with AVAssetWriters and AVAssetWriterInputs and AVAssetWriterInputPixelBufferAdapters as much as I do, and all you want to do is create a damn movie file from a collection of images without writing 300 lines of code then maybe you won't hate using `NWImageSequencer` - a small Swift (4.0) framework which lets you do exactly that in only a few lines of code.
 
 ## Code Example
 
 **Basic Usage**
 
-You must first instantiate an instance of NWImageSequencer
-
-```
-let sequencer = NWImageSequencer()
-```
-
-
-The following steps create a movie in your local directory using **Closures**
+The following steps create a movie in your local directory.
  
 ```
 let images:[UIImage] //<--your array of images
 let options = NWImageSequencerOptions(outputSize: CGSize(720,720), secondsPerImage: 2.5)
 
-sequencer.createLocalMovieWithImages(images, options: options,
+NWImageSequencer.createLocalMovieWithImages(images, options: options,
             onSuccess: { (movieUrl) -> Void in
                 print("movie successfully created at \(movieUrl)")
             }, 
@@ -35,7 +27,7 @@ sequencer.createLocalMovieWithImages(images, options: options,
 NWImageSequencer also has helper functions to save the movie created in the local directory to an album the photo roll using the Photos framework. The success block returns a PHAsset instance that can be used to fetch the saved video
 
 ```
-sequencer.saveMovieAtUrl(movieUrl, toAlbumNamed: "Example", 
+NWImageSequencer.saveMovieAtUrl(movieUrl, toAlbumNamed: "Example", 
                                onSaveSuccess: { (asset) -> Void in
                                     print("Sucessfully saved video asset: \(asset)")
                                }, 
@@ -43,8 +35,6 @@ sequencer.saveMovieAtUrl(movieUrl, toAlbumNamed: "Example",
                                     print("Error saving video: \(error)")
                                })
 ``` 
-
-If you prefer to use **delegation**, there are alternate methods that accept classes confroming to  `NWImageSequencerDelegate` and `NWImageSequencerSaveDelegate` protocols
 
 **Configuration**
 
@@ -74,7 +64,6 @@ let options =  NWImageSequencerOptions(
 * Add better image fitting options to handle images of various sizes
 * Add ability to specify display time for each image individually
 * Add ability to set background color
-* Add objective-C examples
 
 
 
