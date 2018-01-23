@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5F06710F1C18B0EE00421FC2 /* NWImageSequencer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F06710E1C18B0EE00421FC2 /* NWImageSequencer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5FF12B8F1C18B33900B8DBFE /* NWImageSequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF12B8D1C18B33900B8DBFE /* NWImageSequencer.swift */; };
+		5FD95E23201279C400B2C342 /* NWImageSequencer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD95E22201279C400B2C342 /* NWImageSequencer.swift */; };
 		5FF12B901C18B33900B8DBFE /* NWImageSequencerOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF12B8E1C18B33900B8DBFE /* NWImageSequencerOptions.swift */; };
 /* End PBXBuildFile section */
 
@@ -16,7 +16,7 @@
 		5F06710B1C18B0EE00421FC2 /* NWImageSequencer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NWImageSequencer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F06710E1C18B0EE00421FC2 /* NWImageSequencer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NWImageSequencer.h; sourceTree = "<group>"; };
 		5F0671101C18B0EE00421FC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5FF12B8D1C18B33900B8DBFE /* NWImageSequencer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NWImageSequencer.swift; sourceTree = "<group>"; };
+		5FD95E22201279C400B2C342 /* NWImageSequencer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWImageSequencer.swift; sourceTree = "<group>"; };
 		5FF12B8E1C18B33900B8DBFE /* NWImageSequencerOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NWImageSequencerOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -51,9 +51,9 @@
 			isa = PBXGroup;
 			children = (
 				5F06710E1C18B0EE00421FC2 /* NWImageSequencer.h */,
-				5FF12B8D1C18B33900B8DBFE /* NWImageSequencer.swift */,
 				5FF12B8E1C18B33900B8DBFE /* NWImageSequencerOptions.swift */,
 				5F0671101C18B0EE00421FC2 /* Info.plist */,
+				5FD95E22201279C400B2C342 /* NWImageSequencer.swift */,
 			);
 			path = NWImageSequencer;
 			sourceTree = "<group>";
@@ -136,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5FF12B8F1C18B33900B8DBFE /* NWImageSequencer.swift in Sources */,
+				5FD95E23201279C400B2C342 /* NWImageSequencer.swift in Sources */,
 				5FF12B901C18B33900B8DBFE /* NWImageSequencerOptions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -186,6 +186,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -226,6 +227,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";

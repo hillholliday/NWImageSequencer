@@ -12,10 +12,10 @@ public struct NWImageSequencerOptions {
     
     let secondsPerImage:Float
     let outputSize:CGSize
-    let fileType:String
+    let fileType:AVFileType
     let localPath:String?
     
-    public init(outputSize:CGSize, secondsPerImage:Float = 1.0, localPath:String? = nil, fileType:String = AVFileTypeQuickTimeMovie) {
+    public init(outputSize:CGSize, secondsPerImage:Float = 1.0, localPath:String? = nil, fileType:AVFileType = AVFileType.mov) {
         self.secondsPerImage = secondsPerImage
         self.outputSize = outputSize
         self.localPath = localPath
