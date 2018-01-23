@@ -10,7 +10,6 @@ import AssetsLibrary
 import Photos
 import AVFoundation
 
-
 //MARK: Public
 public typealias SuccessHandler = (_ movieUrl: URL) -> Void
 public typealias ErrorHandler = (_ error: Error) -> Void
@@ -124,7 +123,7 @@ public struct NWImageSequencer {
                     presentTime = CMTimeMake(0,600)
                 }
                 
-                if(i > images.count) {
+                if(i >= images.count) {
                     buffer = nil
                 } else {
                     do {
@@ -158,7 +157,7 @@ public struct NWImageSequencer {
         }
     }
     
-    public func saveMovieAtUrl(url:URL, toAlbumNamed albumName:String, onSaveSuccess:PHSaveSuccessHandler?, onError:ErrorHandler?) {
+    public static func saveMovieAtUrl(url:URL, toAlbumNamed albumName:String, onSaveSuccess:PHSaveSuccessHandler?, onError:ErrorHandler?) {
         let fetchOptions = PHFetchOptions()
         var placeHolder:PHObjectPlaceholder? = nil
         fetchOptions.predicate = NSPredicate(format: "title = %@", albumName)
@@ -186,7 +185,7 @@ public struct NWImageSequencer {
         }
     }
     
-    private func saveMovieToCollection(collection:PHAssetCollection, withURL url: URL, onSaveSuccess:PHSaveSuccessHandler?, onError:ErrorHandler?) {
+    private static func saveMovieToCollection(collection:PHAssetCollection, withURL url: URL, onSaveSuccess:PHSaveSuccessHandler?, onError:ErrorHandler?) {
         
         var assetPlaceHolder:PHObjectPlaceholder?
         
@@ -229,7 +228,7 @@ public struct NWImageSequencer {
         if let path = path {
             return path
         } else {
-            return NSHomeDirectory() + "tmp/nwimagesequence.mov"
+            return NSHomeDirectory() + "/tmp/nwimagesequence.mov"
         }
     }
     
